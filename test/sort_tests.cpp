@@ -55,6 +55,14 @@ TEST(sort_tests, insertion_sort_desc)
     EXPECT_TRUE(is_sorted_desc(input));
 }
 
+TEST(sort_tests, insertion_sort_rec)
+{
+    auto input = generate_random_data(100);
+    rec_insertion_sort(input, 0, 99);
+
+    EXPECT_TRUE(is_sorted_asc(input));
+}
+
 TEST(sort_tests, selection_sort)
 {
     auto input = generate_random_data(100);

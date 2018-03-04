@@ -31,6 +31,22 @@ void insertion_sort_desc(std::vector<int>& in)
     }
 }
 
+void rec_insertion_sort(std::vector<int>& in, unsigned int beg, unsigned int end)
+{
+    if(end > beg)
+    {
+        rec_insertion_sort(in, beg, end-1);
+        int key = in[end];
+        int i = end - 1;
+        while(i >=0 && in[i] > key)
+        {
+            in[i + 1] = in[i];
+            i--;
+        }
+        in[i+1] = key;
+    }
+}
+
 void selection_sort(std::vector<int>& in)
 {
     for(unsigned int i=0; i<in.size()-1; i++)
