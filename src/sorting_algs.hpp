@@ -87,7 +87,7 @@ void merge(std::vector<int>& in, unsigned int beg, unsigned int mid, unsigned in
 
     unsigned int i = 0, j = 0;
 
-    for(unsigned int k = beg; k < end; k++)
+    for(unsigned int k = beg; k < end+1; k++)
     {
         if(l[i] < r[j])
         {

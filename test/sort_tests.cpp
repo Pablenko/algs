@@ -3,7 +3,7 @@
 #include <random>
 #include <iostream>
 
-#include "insertion_sort.hpp"
+#include "sorting_algs.hpp"
 
 std::vector<int> generate_random_data(unsigned int size)
 {
